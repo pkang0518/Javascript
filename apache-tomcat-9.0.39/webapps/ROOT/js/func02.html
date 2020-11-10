@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<script type="text/javascript">
+    "use strict"; 
+    function doFunc() {
+        console.log( '선언적 함수' );
+    }
+
+    let doFunc1 = function() {
+        console.log( '익명' );
+    };
+
+    let doFunc2 = function( data1, data2) {
+        return data1 + data2;
+    };
+</script>
+</head>
+<body>
+<script type="text/javascript">
+    console.log( '결과', doFunc2(10,20) );
+</script>
+</body>
+</html>

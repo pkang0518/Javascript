@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+</head>
+<body>
+
+<!-- Script 를 위로 가져올때 window.onload = function () 사용 -->
+<script type="text/javascript">
+    "use strict";
+    const viewTag = function () {
+    // window.onload = function () {
+        //console.log( document.getElementById( 'first' ) );
+        //console.log( document.getElementById( 'second' ) );
+
+        // document.getElementsByTagname <- 복수형***
+        let tags = document.getElementsByClassName( 'cat' );
+        console.log( tags [0] );
+        console.log( tags [0].innerHTML ); // HTML 안에 들어있는 내용을 읽어줌
+        console.log( tags [0].textContent ); // Text 만을 읽어줌
+
+        // tags [0].innerHTML = '<i>Hello div</i>'; // <i></i> 기울여쓰기 italic *** tags [0].innerHTML = ' 내용 ' => <div id = "first" class="cat"><b>첫 번째 div</b></div> 부분의 내용을 동적으로 바꾸어줌
+        tags[0].textContent = '<i>Hello div<i>'; // textContent에서는 내용만을 바꾸기 때문에 <i></i> 적용 안됨
+    };
+</script>
+
+<input type = "button" value = "태그 읽기" onclick = "viewTag()" />
+<hr />
+
+<!-- id 중복은 안됨 -->
+<div id = "first" class="cat"><b>첫 번째 div</b></div>
+<div id = "second" class="cat">두 번째 div</div>
+<div id = "third" class="cat">세 번째 div</div>
+
+
+</body>
+</html>

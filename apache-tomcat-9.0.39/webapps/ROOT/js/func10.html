@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+</head>
+<body>
+<script type="text/javascript">
+    "use strict"
+
+    // 형변환(p. 160)
+    // 묵시적(자동) 형변환 : 작은자료형 -> 큰자료형
+    // 명시적 형변환 (*)
+    //          큰자료형 -> 작은자료형
+    //          다른 자료형
+    // Number() => 숫자형
+    // String() => 문자열
+    // Boolean() => 진리값
+
+    let data1 = '10';
+    let data2 = '20'; //<- '숫자' = 문자열 취급 why? ''
+
+    //숫자열 형변환
+    let sum1 = data1 + data2;
+    console.log( sum1 );
+    let sum2 = Number(data1) + Number(data2);
+    console.log ( sum2 );
+    
+    // NaN - Not a Number
+    let data3 = Number( '20일' );
+    console.log( data3 );
+
+    //문자열이 붙어있어도 앞이 숫자열이라면 숫자 변환가능
+    let data4 = parseInt( '20일' );
+    console.log( data4 );
+</script>
+</body>
+</html>

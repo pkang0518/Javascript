@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+</head>
+<body>
+
+<form action = "test1.html" name = "frm1">
+</form>
+<form action = "test2.html" name = "frm2">
+</form>
+<script type="text/javascript">
+    "use strict";
+
+    console.log( typeof document.forms );   // 배열형식으로 구성
+    console.log( document.forms.length );   // 위에 form 형식이 1개이면 1 2개이면 2 출력
+    
+    console.log( document.forms[0] );
+    console.log( document.forms[1] );
+
+    // form 이름이 없을 때 접근
+    console.log( document.forms[0].action );
+    console.log( document.forms[1].action );
+
+    // form 이름이 있을 때 접근
+    console.log( document.frm1.action );
+    console.log( document.frm2.action );
+</script>
+</body>
+</html>

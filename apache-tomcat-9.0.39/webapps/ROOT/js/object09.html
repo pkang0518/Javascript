@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+</head>
+<body>
+<script type="text/javascript">
+    "use strict";
+
+    // constructor(생성자)
+    // 대문자 시작
+    function Student( name, kor, mat ) {
+        this.name = name;
+        this.kor = kor;
+        this.mat = mat;
+    }
+
+    // 프로토타입 : 같은 객체형태들이 공유
+    Student.prototype.getSum = function() {
+        return this.kor + this.mat;
+    };
+
+    Student.prototype.getAverage = function() {
+        return this.getSum() / 2;
+    };
+
+    let stu1 = new Student( '홍길동', 94, 88 );
+    let stu2 = new Student( '박문수', 98, 90 );
+
+    console.log( stu1.name );
+    console.log( stu1.getSum() );
+    console.log( stu1.getAverage() );
+    console.log( stu1.getSum(), stu1.getAverage() );
+    console.log( stu2.name );
+    console.log( stu2.getSum() );
+    console.log( stu2.getAverage() );
+    console.log( stu2.getSum(), stu2.getAverage() );
+
+</script>
+</body>
+</html>

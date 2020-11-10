@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+</head>
+<body>
+<script type="text/javascript">
+    "use strict";
+
+    console.log( '시작' );
+    loop:
+    for(let i=1; i<5; i++) {
+        for( let j=1 ; j<5 ; j++ ) {
+            if( i==2 ) {
+                break loop; // 중지
+                //continue; // 한번 거름
+            }
+            console.log( i, j );
+        }
+    }
+    console.log(' 끝 ');
+</script>
+</body>
+</html>

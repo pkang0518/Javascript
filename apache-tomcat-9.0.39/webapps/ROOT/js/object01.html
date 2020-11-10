@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+</head>
+<body>
+<script type="text/javascript">
+    "use strict";
+
+    // json을 활용한 객체 선언
+
+    let arr = []        // array 배열 선언
+    let product1 = {}   // object 객체 선언 -> 다른 언어에서는 연관배열 / 사전구조로 표기
+
+    console.log( typeof product1 );
+
+    // 자료형 + 초기화 동시에
+    let product2 = {
+        // 키(프로퍼티 이름): 값
+        name: '7D 건조망고',
+        type: '당절임',
+        components: '망고, 설탕, 기타',
+        region: '필리핀',
+    };
+
+    console.log( product2 );
+    console.log( product2['name'] );
+    console.log( product2.name );  // 이름.값
+
+    product2.name = '3D 건조 딸기';
+    console.log( product2.name );    
+
+</script>
+</body>
+</html>

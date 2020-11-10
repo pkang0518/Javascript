@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>난 제목</title>
+    <meta charset="utf-8" />
+</head>
+<body>
+
+<form>
+    <!-- 한줄 입력 내용 -->
+    <input type="text" /><br /><br />
+    <input type="text" size="50" /><br /><br />
+    <input type="text" size="50" maxlength="20" /><br /><br />
+    <input type="text" size="50" maxlength="20" value="초기값" /><br /><br />
+    <input type="text" size="50" maxlength="20" placeholder="입력해주세요" /><br /><br />
+    <input type="text" size="50" maxlength="20" value="초기값" readonly /><br /><br />
+    
+    <hr />
+    <!-- 한줄 입력 내용 -->
+    <input type="password" /><br /><br />
+
+    <!-- 여러줄 입력 -->
+    <textarea></textarea><br /><br />
+    <textarea rows="5" cols="50">초기값</textarea><br /><br />
+
+    <hr />
+
+    <!-- 다중 선택 -->
+    <input type="checkbox" />사과<br />
+    <input type="checkbox" checked/>수박<br />
+    <input type="checkbox" />딸기<br />
+
+    <hr />
+    <!-- 단일 선택 -->
+    <input type="radio" name="n" />사과<br />
+    <input type="radio" name="n" checked />수박<br />
+    <input type="radio" name="n" />딸기<br />
+
+    <hr />
+
+    <!-- 단일, 다중 -->
+    <select>
+        <option>사과</option>
+        <option selected>수박</option>
+        <option>딸기</option>
+    </select>
+    
+    <hr />
+
+    <select multiple>
+        <option>사과</option>
+        <option selected>수박</option>
+        <option>딸기</option>
+    </select>
+
+    <hr />
+
+    <input type="file" /><br /><br />
+
+    <hr />
+    <!-- 숨김 데이터 -->
+    <input type="hidden" value="초기값" /><br /><br />
+
+    <hr />
+    <!-- RGB(Red(0~255), Green(0~255), Blue(0~255)) -->
+    <input type="color" value="#0000ff" /><br /><br />
+    <input type="date" value="2020-05-05" /><br /><br />
+
+    <input type="number" /><br /><br />
+    <input type="number" min="5" max="10" step="2" value="5" /><br /><br />
+
+    <input type="range" min="5" max="10" /><br /><br />
+
+</form>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+</head>
+<body>
+<script type="text/javascript">
+    "use strict";
+
+    
+    // 자료형 조심
+    const checkfrm = function( ) {
+        let num1 = parseInt( document.frm1.data1.value );
+        let num2 = parseInt( document.frm1.data2.value );
+        let oper = document.frm1.oper.value;
+
+        // eval - 문자열을 받아 숫자로 변환하여 결과값을 돌려줌
+        let result = eval( num1 + ' ' + oper + ' ' + num2 );
+        document.frm1.result.value = result;
+        };
+    
+
+    // 바꿔보기
+
+    /*
+    const checkfrm2 = function() {
+        
+        document.frm1.result.value = Number(document.frm1.data1.value) + Number(document.frm1.data2.value);    
+    }
+    */
+
+    // 문자열을 숫자로 바꾸는 방법
+    // 1. parseInt( 문자열 )
+    // 2. Number ( 문자열 ) 
+
+</script>    
+
+<form action = "test1.html" name = "frm1">
+<input type="text" name="data1" />
+<select name="oper">
+    <option value = "+" selected>+</option>
+    <option value = "-" selected>-</option>
+    <option value = "/" selected>/</option>
+    <option value = "*" selected>*</option>
+</select>
+<input type="text" name="data2" />
+<input type="button" value="결과" onclick="checkfrm()" />
+<input type="text" name="result" />
+</form>
+
+
+</body>
+</html>

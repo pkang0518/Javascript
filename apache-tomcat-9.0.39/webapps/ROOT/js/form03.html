@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+</head>
+<body>
+<script type="text/javascript">
+    "use strict";
+
+    const checkfrm = function( ) {
+        console.log( document.frm1.action );
+        
+        // console.log( document.frm1.data1.value ); // .value 를 안할 시 오브젝트 출력
+        // console.log( typeof document.frm1.data1.value );
+        // document.frm1.data1.value = '초기값' ;
+
+        console.log( document.frm1.data2.value );
+    };
+
+</script>    
+
+<form action = "test1.html" name = "frm1">
+데이터<input type="text" name="data1" value="초기값"/><br /><br />
+비밀번호<input type="password" name="data2"/><br /><br />
+<!-- *****************html에서 함수 호출법****************** -->
+<input type="button" value="form문 읽기" onclick="checkfrm()" />
+
+</form>
+
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+</head>
+<body>
+<script type="text/javascript">
+    "use strict";
+
+    let map = new Map();
+    console.log( map.size );
+
+    // 빈 map에 데이터 추가하기 map.set ( , )
+    map.set( 'one', 100); // 해석을 하면 'one'의, 데이터 값 100
+    map.set( 'two', 200); // 해석을 하면 'two'의, 데이터 값 200
+    console.log( map.size );
+    console.log( map );
+
+    // 데이터 가져오기 map.get
+    console.log( map.get( 'one' ) ); // 'one'에 해당하는 데이터를 가져와줘
+    console.log( map.get( 'two' ) ); // 'two'에 해당하는 데이터를 가져와줘
+    
+    // 데이터가 맞는지 검사하기 map.has
+    console.log( map.has( 'one' ) );    // True
+    console.log( map.has( 'two' ) );    // True
+    console.log( map.has( 'three' ) );  // False
+
+    // 전체 데이터를 가져오기 위해서
+    // 일반적으로 for문을 사용
+    // 열거자 객체(이터레이터) iteratorObj.next()
+
+    let iteratorObj = map.entries();
+    let result = iteratorObj.next();
+    console.log( result );
+    console.log( result.value[0] );
+    console.log( result.value[1] );
+    
+    result = iteratorObj.next();
+    console.log( result );
+    console.log( result.value[0] );
+    console.log( result.value[1] );
+    
+    /*
+    // 3번째가 없기 때문에 값 출력 오류남
+    result = iteratorObj.next();
+    console.log( result );
+    console.log( result.value[0] );
+    console.log( result.value[1] );
+    */
+
+    // keys()
+    // 'one' 'two' 이 두 가지 key만 가져오고 싶을 때 .keys()
+    let keyObj = map.keys();
+    console.log( keyObj.next().value );
+    console.log( keyObj.next().value );
+
+    // values() key 값 안에서의 value 값 출력
+    let valueObj = map.values();
+    console.log( valueObj.next().value ); 
+    console.log( valueObj.next().value ); 
+
+
+</script>
+</body>
+</html>

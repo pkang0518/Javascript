@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<style type="text/css">
+    table {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+
+    td {
+        border: 1px dashed black;
+        width: 100px;
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+<script type="text/javascript">
+    "use strict"
+
+    document.write( '<table>' );
+    for( let dan=0 ; dan<=9 ; dan++ ) {
+        document.write ( '<tr> ' );
+        for( let col = 0 ; col<=9 ; col++) {
+            // 0행 0열을 출력
+            if( dan == 0 && col == 0) {
+                document.write( '<td></td>'); // <- '<td> 문자 출력 </td>'
+            // 0행
+            } else if ( dan == 0 ) {
+                document.write( '<td>X' + col + '</td>' ); // '<td>출력하고 싶은 내용' + col + '</td>'
+            // 0열
+            } else if ( col == 0 ) {
+                document.write( '<td>' + dan + '단</td>' );
+            } else {
+                document.write ( '<td>' + dan + 'X' + col + ' = ' + (dan*col) + '</td>' );  // 문자열 + 값 + 문자열
+            }
+        }
+        document.write( '</tr>' );
+    }
+    document.write( '</table>' );
+
+    document.write( '<br /><hr /><hr /><br />' );
+
+    document.write( '<table>' );
+    for( let row=0 ; row<=9 ; row++ ) {
+        document.write( '<tr>' );
+        for( let col = 0 ; col<=9 ; col++ ) {
+            if( row == 0 && col == 0 ) {
+                document.write( '<td></td>');
+            } else if ( row == 0 ) {
+                document.write( '<td> X' + row + '</td>' );
+            } else if ( col == 0 ) {
+                document.write( '<td>' + col + '단</td>' );
+            } else {
+                document.write ( '<td>' + row + 'X' + col + '=' + (row*col) + '</td>' );
+            }
+        }
+        document.write( '</tr>');
+    }
+    document.write( '</table>' );                
+</script>
+</body>
+</html>

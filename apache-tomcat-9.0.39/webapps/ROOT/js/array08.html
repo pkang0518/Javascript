@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+</head>
+<body>
+<script type="text/javascript">
+    "use strict";
+
+    const values = [ 1, 2, 3 ];
+    console.log( values[0] );
+    console.log( values[1] );
+    console.log( values[2] );
+
+    // 각 값을 변수에 할당
+    let one, two, three ;
+    one = values[0];
+    two = values[1];
+    three = values[2];
+    console.log( one );
+    console.log( two );
+    console.log( three );
+
+    // destructuring
+    [ one, two, three ] = values;  // 각 값을 변수에 할당하는 위 내용과 동일
+
+    console.log( one );
+    console.log( two );
+    console.log( three );
+
+    // 이런 구조도 가능
+    let [ six, seven, eight ] = values;
+    console.log( six, seven, eight );
+
+    /*
+    let [ four, five ] = values;
+    console.log( four, five );
+    */
+
+    // 밸류값을 지정해버리면 지정값 출력
+    let [ four, five, nine, ten=10, eleven=12 ] = values;
+    console.log( four, five, nine, ten, eleven );
+
+
+</script>
+</body>
+</html>
+
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<style type="text/css">
+    /* 자식 */
+    /* div > p { background-color: red; } */
+    /* 후손 */
+    /* div p { background-color: red; } */
+    /* 아우 하나 */
+    /* div + p { background-color: red; } */
+    /* 아우 전체 */
+    div ~ p { background-color: red; }
+</style>
+</head>
+<body>
+
+<p>Hello CSS1</p>
+<div>
+    <p>Hello CSS2</p>
+    <span>
+        <p>Hello CSS3</p>
+    </span>
+    <p>Hello CSS4</p>
+</div>
+<p>Hello CSS5</p>
+<p>Hello CSS6</p>
+
+</body>
+</html>

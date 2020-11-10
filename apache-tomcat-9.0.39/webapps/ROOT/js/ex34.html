@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+</head>
+<body>
+<script type="text/javascript">
+    "use strict";
+
+    // {}밖이 1번 수행될 때 {안에 있는 값은 3번 수행}
+    console.log( '시작' );
+    for(let i=1 ; i<=3 ; i++ ) {
+        for(let j=1 ; j<=3 ; j++) {  // i라는 값이 있기에 중복되게하면 안되므로 j값 입력
+            console.log( i, j );
+        }
+    }
+    console.log( '끝' );
+</script>
+</body>
+</html>

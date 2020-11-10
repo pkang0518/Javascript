@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+</head>
+<body>
+<script type="text/javascript">
+    "use strict";
+
+    // 수학
+    // 과학연산 / 게임
+    // 올림 / 내림 / 반올림
+    // 최대 / 최소
+    // 난수
+
+    // 최대 / 최소
+    console.log( Math.max( 52, 273, 67, 32 ) ); // 최대
+    console.log( Math.min( 52, 273, 67, 32 ) ); // 최소
+
+    // 일련 숫자의 최대값을 구하는 함수 작성
+    // 함수 이름 : maxvalue
+
+
+    const maxvalue = function() {
+        let maxvalue = 0; 
+        for( const value of arguments ) {
+            if( value >= maxvalue ) {
+                maxvalue = value
+            }
+        }
+        return maxvalue;
+    }
+
+    console.log( maxvalue (10, 1, 6, 7, 9 ) );
+
+
+    let maxvalue1 = function() {
+        let max = arguments[0]; // let 저장공간명 = arguments [0] (argument는 나중 console.log(maxvalue (0)) 1번째 값)
+        for( let j in arguments ) {
+            if( max < arguments[j] ) {
+                max = arguments[j]
+            }
+        }
+        return max
+    }
+
+    console.log( maxvalue1( 52, 273, 67, 32, 888) );
+    
+    // 일련 숫자의 최소값을 구하는 함수 작성
+
+    
+
+
+
+</script>
+</body>
+</html>

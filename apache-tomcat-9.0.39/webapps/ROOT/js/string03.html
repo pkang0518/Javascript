@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+</head>
+<body>
+<script type="text/javascript">
+    "use strict";
+    
+    /*  연습문제
+        함수이름 : initcap
+        inicap( 'hong gil dong' ) => Hong Gil Dong
+        * 문자열 string class method 활용을 통해
+    
+    hong gil dong => Hong Gil Dong => 규칙성을 찾아서 나누어줘야함
+
+    hong    = h(->H) + ong
+    gil     = g(->G) + il
+    dong    = d(->D) + ong
+    
+    */
+
+    let result = '';
+    const initcap = function ( sentence ) {  // 27번째 줄에 있는 initcap('hong gil dong')이 sentence로 들어감
+        let words = sentence.split( ' ' );   // (' space ')
+        // console.log( words) <- 확인작업 1
+        for( let i in words ) {
+            // console.log( words[i] ); <- 확인작업 2
+            
+            // console.log( words[i].substring( 0,1 ).toUpperCase() ); <- 확인작업 3
+            // console.log( words[i].substring( 1 ) );    <- 확인작업 4
+            result += words[i].substring( 0, 1 ).toUpperCase() + words[i].substring( 1 ) + ' ';
+        }
+        // return sentence; <- 확인작업 1234를 위한 표현
+        return result;
+    };
+
+    console.log( initcap( 'hong gil dong') );
+
+
+    
+
+    
+</script>
+</body>
+</html>

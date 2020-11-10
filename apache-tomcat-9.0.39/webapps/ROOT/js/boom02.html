@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+</head>
+<body>
+<script type="text/javascript">
+    "use strict";
+
+    // window.open()
+    // (window.)open('url', '창이름', '옵션');
+
+    // open( 'https://www.daum.net' )
+
+    // 옵션이 되게 많음. 그 중 4가지 자주 쓰이는 표현
+    // top / left, width / height
+    
+    let top1 = 100
+    let left = 300
+    let width = 600
+    let height = 800
+    // let option = 'top='+ top1 + ',left=' + left + ',width=' + width + ',height=' + height 
+    // 템플릿 문자열로 변환 `(backtap 탭키 위에 있는 키) ${변수}
+    let option = `top=${top1},left=${left},width=${width},height=${height}`;
+    
+    // child 정보를 가지고 있음
+    let child = open( './subwin.html', 'openwin', option)
+    
+    const moveWindow = function () {
+        //child.moveBy( 10, 10 ); // x축, y축 방향으로 10씩 움직여
+        child.moveTo( 10, 10 ); // 좌표 (10, 10)로 움직여
+    }
+
+    /*
+    open( 'https://m.daum.net', 'openwin', 'top=100, left=300, width=600, height=800' )
+    */  
+
+    // 5초 후에 자동적으로 m.daum.net 페이지가 열리게끔 함수 openWindow() 만들기
+
+
+
+
+</script>
+<!-- html에서 함수 호출-->
+<input type="button" value="움직이기" onclick="moveWindow()"/>
+
+</body>
+</html>

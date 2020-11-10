@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+</head>
+<body>
+<script type="text/javascript">
+    "use strict";
+
+    /*
+    // <tr> 행 <td> 열
+    document.write( '<table border="1" width="1000">' );
+        document.write( '<tr>');
+        for(let i=1 ; i<=9 ; i++ ){ //<- i++ i에 +1 
+            document.write('    <td>2 * '+i+' = '+2 * i+'</td>'); //+i+ 의미는 i의 값을 대입하겠다
+        }
+        document.write(' </tr>');
+    document.write( '</table>' );
+    */
+
+document.write( '<table border="1" width="1000">' );
+    document.write( '<tr>');
+    for(let i=1 ; i<=9 ; i++ ) {
+        document.write( '    <td> 2X ' + i + ' = ' + (2*i) + '</td>' ); //+i+ 의미는 i의 값을 대입하겠다(+는 연결의 의미)
+    }
+    document.write(' </tr>');
+document.write( '</table>' );
+
+</script>
+</body>
+</html>

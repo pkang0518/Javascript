@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+</head>
+<body>
+<script type="text/javascript">
+
+
+    let product1 = {
+        // 속성을 나타냄
+        name: '7D 건조망고',
+        type: '당절임',
+        components: '망고, 설탕, 기타',
+        region: '필리핀',
+    };
+    
+    /*
+    // let output = ''; = 초기화 
+    let output = '';
+    output += product1.name + '\n';
+    output += product1.type + '\n';
+    output += product1.components + '\n';
+    output += product1.region + '\n';
+
+    console.log( output );
+    */
+
+    // "use strict" 를 제거해야 됨
+    let output = '';
+
+    with ( product1 ) {
+        output += name + '\n';
+        output += type + '\n';
+        output += components + '\n';
+        output += region + '\n';
+    }
+
+    console.log( output );
+
+
+</script>
+</body>
+</html>

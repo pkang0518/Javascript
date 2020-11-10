@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+</head>
+<body>
+<script type="text/javascript">
+    "use strict";
+
+    // **주의** script의 위치가 body 사이로 올라왔음 이 때에는 메서드 처리 필요
+    // 이벤트
+    // 문서 전체적으로 읽어서 메모리(DOM)화 시킨 후에
+    window.onload = function( ) {
+    console.log( document.frm1.action );
+    };
+
+    const checkfrm = function( ) {
+        console.log( document.frm1.action );
+    };
+
+</script>    
+
+<form action = "test1.html" name = "frm1">
+
+<!-- *****************html에서 함수 호출법****************** -->
+<input type="button" value="form문 읽기" onclick="checkfrm()" />
+
+</form>
+
+<!-- *****************html에서 함수 호출법****************** -->
+<a href = "javascript:checkfrm()">form문 읽기</a>
+
+
+</body>
+</html>

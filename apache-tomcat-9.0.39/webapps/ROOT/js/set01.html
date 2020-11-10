@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+</head>
+<body>
+<script type="text/javascript">
+    "use strict";
+
+    let emptyObj = new Set();
+    console.log( emptyObj );
+
+    // emptyObj에 데이터 추가하기
+    // 자동 중복 제거됨
+    let set1 = new Set( [ 1, 2, 3, 4, 4, 3 ] );
+    console.log ( set1 );
+    console.log ( set1.size );
+
+    for( let amgn of set1 ) {
+        console.log( amgn );
+    }
+
+    // set.add( 데이터값 ) *중복되는 부분이 있다면 제거된 후 하나만 출력
+    set1.add( 5 )
+    set1.add( 6 )
+    set1.add( 5 )
+    set1.add( 6 )
+
+    for( let amgn of set1 ) {
+        console.log( amgn );
+    }
+    
+    // 검사(검색)
+    console.log( set1.has( 5 ) );
+    console.log( set1.has( 7 ) );    // 5는 가지고 있기에 True / 7은 없기에 False
+
+</script>
+</body>
+</html>

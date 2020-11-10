@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+</head>
+<body>
+<script type="text/javascript">
+    "use strict"; // 문법 검사를 엄격하게 진행
+
+    // 변수의 선언
+    var num1;
+    var num2;
+    
+    // 값의 할당 num 1 = 10 같다는 말이 아니고 변수값을 대입한다는 말
+    // 값의 할당 : 변수의 초기화
+    num1 = 10; 
+    num2 = 20;
+
+    console.log( num1 );
+    console.log( 'num1' );  // ' ' 따옴표가 들어가면 인식 X
+    console.log( num2 );
+
+    // 변수 안에는 하나의 값이 들어가야함
+    // 변수의 값이 바뀌면 기존에 있던 값 지우고 바뀐 값 출력 
+    num1 = 30;
+    console.log( num1 );
+
+    var num3 = 40;
+    console.log( num3 );
+
+    //var num4; // 값을 입력 안하면 undefied로 출력
+    //console.log( num4 );
+
+    num5 = 50;  // var 생략 가능 * 단 'use strict' 일 경우 인식 X
+    console.log( num5 );
+</script>
+</body>
+</html>

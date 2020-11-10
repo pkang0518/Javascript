@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<script type="text/javascript">
+    "use strict";
+    //전역
+    let sports = '축구';
+    let get = function() {
+        // 지역 { 중요 }
+        // {중괄호가 쓰이는 곳} 함수 / 제어문
+        let music = '클래식';
+        // 지역변수 선언
+        let sports = '야구';
+        console.log( sports );
+        console.log ( music );
+    };
+</script>
+</head>
+<body>
+<script type="text/javascript">
+    get();
+    console.log( sports );
+    //console.log( music );
+
+</script>
+</body>
+</html>

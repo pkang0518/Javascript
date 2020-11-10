@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+</head>
+<body>
+<script type="text/javascript">
+    "use strict";
+
+    // 객체의 프로퍼티와 메서드 출력
+    let output = '';
+    for( let key in window ) {
+        if( key != 'external' ) {
+            output += key + ' : ' + window [ key ] + '\n';
+        }
+    }
+
+    /*
+    console.log( output );
+    */
+
+    console.log( window['screenTop'])
+    console.log( window['screenLeft'])
+
+    // [' '] 대신 window. ~ 로 접근 가능
+    console.log( window.screenTop );
+    console.log( window.screenLeft );
+
+    // window. 생략 가능
+    // window.alert ( '경고창' );
+    alert ('경고장'); // (window.)alert ( '경고장' );
+    
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+</head>
+<body>
+<script type="text/javascript">
+    "use strict";
+
+    // 중복값 제거... => 함수화
+
+    // 함수를 정의만 해놈
+    const lottofunc = function() {
+        let lottos = new Array();
+        for( let row = 1 ; row <=5 ; row++ ) {
+            //중복제거
+            let set = new Set();
+            while(true) {
+                set.add(parseInt(Math.random() * 45) +1 );
+                if( set.size == 6) {
+                    break;
+                }
+            }
+            lottos.push( set );
+        }
+        return lottos;
+    }
+
+    // 함수를 부르는 부분
+    let lottos = lottofunc();
+
+    console.log( lottos )
+    /*
+    let lottosvalue = lottos[0].values ();
+    console.log(lottosvalue );
+    console.log(lottosvalue.next().value); // 이름.next().value <-- 첫번째에 있는 value 값을 뽑아온거
+    */
+
+    document.write( '<table border ="1" width = "600">' );
+    for( let i=0 ; i<=4 ; i++ ) {
+        let valueObj = lottos[i].values(); //벨류값 객체들의 모음
+        document.write( '<tr>' );
+            for( let j=1 ; j<7 ; j++ ) {
+                document.write( '<td>' + ( valueObj.next().value ) + '</td>') // 첫번째 객체값 지정.value (key 값) 암기필수
+            }           
+        document.write( '</tr>' );
+        }
+    document.write( '</table>' );
+
+
+
+
+</script>
+</body>
+</html>

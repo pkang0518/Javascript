@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>난 제목</title>
+    <meta charset="utf-8" />
+</head>
+<body>
+<!--
+    https://search.naver.com/search.naver?sm=top_hty&fbm=1&ie=utf8&query=starwars
+-->
+<form action="https://search.naver.com/search.naver" method="get">
+    <input type="text" name="query" />
+    <input type="hidden" name="sm" value="top_hty" />
+    <input type="hidden" name="fbm" value="1" />
+    <input type="hidden" name="1&ie" value="utf8" />
+    <input type="submit" value="네이버 검색" />
+</form>
+
+<hr />
+<body>
+    <!--
+        https://search.daum.net/search?w=tot&DA=YZR&t__nil_searchbox=btn&sug=&sugo=&sq=&o=&q=starwars
+    -->
+    <form action="https://search.daum.net/search" method="get">
+        <input type="text" name="q" />
+        <input type="hidden" name="w" value="tot&DA" />
+        <input type="hidden" name="YZR&t__nil_searchbox" value="btn" />
+        <input type="hidden" name="&sug" value="&sugo" />
+        <input type="hidden" name="&sq" value="&o" />
+        <input type="submit" value="다음 검색" />
+
+</body>
+</html>

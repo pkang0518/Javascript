@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<script type="text/javascript">
+    "use strict";
+    
+    // 선언적 함수
+    // 선언 <- 콘솔창에 아무것도 안뜸(선언 부분 입력은 표시되지 않음)
+    function doFunc1() {
+        console.log( 'Hello Function' );
+    }
+
+    function doFunc2( data1 ) {
+        //let data1 = 10;
+        console.log( 'doFunc2', data1);
+    }
+    
+    // 동사(소문자) + 기능(대문자)
+    // 전체를 소문자
+    function doFunc3( data1, data2 ) {
+        console.log( 'doFunc3', data1);
+        console.log( 'doFunc3', data2);
+    }
+
+    // 호출시킨 결과 값만 알고 싶을 때
+    function doFunc4( data1, data2 ) {
+        let sum = data1 + data2;
+        return sum;
+    }
+</script>
+</head>
+<body>
+<script type="text/javascript">
+    // 실행 (주 흐름)
+    doFunc1();
+    doFunc2(10);
+    doFunc3(10, 20);
+
+    // 호출시킨 결과 값만 출력
+    let result = doFunc4( 20, 40 );
+    console.log( 'result', result );
+    console.log( 'result', doFunc4(100, 200));
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+</head>
+<body>
+<script type="text/javascript">
+    "use strict";
+
+    const checkfrm = function() {
+        console.log( document.frm1.s.options );
+        console.log( document.frm1.s.options.length );
+        console.log( document.frm1.s.options.selectedIndex );
+        // 몇번째 옵션이고 옵션에 대한 밸류값을 보고싶을 때
+        
+        // console.log( document.frm1.s.options[document.frm1.s.options.selectedIndex].value ); // 아래의 option value= "밸류값"을 표시해줌
+        console.log( document.frm1.s.options[document.frm1.s.options.selectedIndex].text ); // <option value = "사과"> * 사과 * </option> Text *사과* 값 표시
+    };
+
+</script>
+
+<form name = "frm1">
+<select name = "s">
+    <option value = "사과">사과</option>
+    <option value = "딸기">딸기</option>
+    <option value = "수박">수박</option>
+    <option value = "참외">참외</option>
+</select>
+<input type="button" value="체크 복사" onclick="checkfrm()" />
+
+</form>
+</body>
+</html>

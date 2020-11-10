@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+</head>
+<body>
+<script type="text/javascript">
+    "use strict";
+    /*
+        변수/상수 - 1개 값
+        변수/상수 - 여러개의 값    - 배열 / array
+    */
+
+    let var1 = '1';
+    let var2 = [];
+
+    console.log( typeof var1 ); // <- 값 1개 문자열 string 출력
+    console.log( typeof var2 ); // <- 배열은 object로 출력
+
+    // 자료형은 기본형과 객체형으로 나눠짐(p.73 기본형 p.122 객체형 표를 참고)
+    // 같은 변수 안에 데이터를 집어넣더라도 데이터 저장 방식이 다름
+    let arr1 = [ 1, 2, 3, 4 ]; // <- 위치 값에 따라 저장 index를 통해 실제 값에 접근 가능
+    console.log ( arr1 );
+    console.log ( var1 );
+
+    console.log ( arr1[0] );
+    console.log ( arr1[1] );
+
+    let arr2 = [ '1', '2', '3', '4' ]; // 꼭 정수가 아니어도 가능 / 문자열도 사용 가능
+    console.log ( arr2[0] );
+
+    let arr3 = [ '가', '나', '다', '라' ]; // 꼭 정수가 아니어도 가능 / 문자열도 사용 가능
+    console.log ( arr3[2] );
+
+    // 권장하지 않음. 배열 안에서는 동종의 데이터를 집어넣어야 호환성이 좋음
+    let arr4 = [ 1, 2, '다', '라' ]; // 꼭 정수가 아니어도 가능 / 문자열도 사용 가능
+    console.log ( arr4[3] );
+
+    // 데이터의 갯수를 알고싶을 때
+    console.log( '데이터 갯수 :', arr1.length ); // console.log( '출력 하고자 하는 말', arr1.length );
+
+    // for문 - 전체 데이터의 조회가 가능
+    for( let i=0 ; i<arr1.length ; i++ ) {
+        console.log( arr1[i] );
+    }
+
+    // undefined 아직 정의되지 않았다
+    console.log( arr1[5] );
+
+    // 새로운 제어문 = index를 통한 값 조회 가능
+    for( let i in arr1 ) {
+        console.log( i, arr1[i] );
+    }
+
+    // 값만을 추출
+    for( let value of arr1 ) {
+        console.log( value );
+    }
+    
+</script>
+</body>
+</html>

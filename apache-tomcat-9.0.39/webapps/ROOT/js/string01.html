@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+</head>
+<body>
+<script type="text/javascript">
+    "use strict";
+    
+    // p.143 참고
+    // String 문자열 조작
+
+    // String 객체 생성 방법 2가지
+    // 사용법은 동일
+    let stringFromLiteral = 'Hello String'; 
+    let stringFromConstructor = new String( 'Hello String' ); 
+
+    console.log( stringFromLiteral ); // 문자열
+    console.log( stringFromConstructor ); // 객체
+
+    let str1 = 'Hello World 안녕 Hello';
+
+    console.log( str1.length );
+
+    // 문자 하나만 추출해서 출력하는 방법
+    let char1 = str1.charAt(0); // space(공백)도 key 취급
+    console.log( char1 );
+    let char2 = str1.charAt(1); 
+    console.log( char2 );
+
+    // 맨 마지막 문자 추출하려면? ( 문자열.length-1 )
+    let char3 = str1.charAt( str1.length-1 );
+    console.log( char3 );
+
+    // 문자 '열'을 추출하려면? 3가지 방법 有
+    // substr / substring / slice
+    console.log( str1.substr( 6, 5) );  // substr(시작인덱스, 길이)
+    console.log( str1.substring( 6, 11 ) ); // substring(시작인덱스, 끝인덱스)
+    console.log( str1.slice( 6, 11 ) ); // slice = substring(시작인덱스, 끝인덱스)
+
+    // 검색
+    
+    console.log( str1.indexOf( 'l' ) );     // =>indexOf( '1',0 )
+    console.log( str1.indexOf( 'l', 4 ) );  // 4번째부터 가장 처음나오는 l의 인덱스 
+    console.log( str1.lastIndexOf( 'l' ) ); // 마지막부터 검색
+
+    // 문자열에 없는 문자를 찾을 때 (-1) => 포함되지 않았다는 뜻
+    console.log( str1. indexOf( 'z' ) );
+
+    // 치환
+    console.log( str1.replace( 'Hello', '안녕' ) );
+
+    // 치환(전체를 바꾸고 싶을 때 => /바꾸고자하는 문자열/g )
+    console.log( str1.replace( /Hello/g, '안녕' ) );
+
+    // 대소문자 변환
+    console.log( 'ABC'.toLowerCase() );
+    var cstr = 'ABC';     // <= 변수값이 2개라 var써준거임 변수값 하나일 시 let으로 사용
+    console.log( cstr.toLowerCase() );
+
+    console.log( 'abc'.toUpperCase() );
+    var cstr = 'abc';     // <= 변수값이 2개라 var써준거임 변수값 하나일 시 let으로 사용
+    console.log( cstr.toUpperCase() );
+
+    // 문자열 연결 : +      ( 문자열.concat ( keys, key..... ) )
+    console.log( str1.concat( 1, 2, 3 ) );
+
+    // 문자열 분리(, 구분자를 이용해 나눔) - 따라서 배열로 봐야함
+    // , (구분자 표시) 
+    let sstr1 = '사과,딸기,수박';
+    let arr1 = sstr1.split( ','); // <- ,로 나눠달라는 의미
+    console.log( arr1 );
+    for( let i in arr1 ) {
+        console.log( arr1[i] );
+    }
+</script>
+</body>
+</html>

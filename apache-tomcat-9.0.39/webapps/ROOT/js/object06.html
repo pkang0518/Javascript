@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+</head>
+<body>
+<script type="text/javascript">
+    "use strict";
+
+    // 동적 추가/삭제
+    let product1 = {};
+    console.log( product1 );
+
+    // key 추가
+    product1.name = '7D 건조 망고';
+    product1.type = '당절임';
+    product1.components = '망고, 설탕, 기타';
+    product1.region = '필리핀';
+    console.log( product1 );
+    
+    // method 추가
+    product1.eat = function() {
+        console.log( '맛있게 먹는다.' );
+    };
+    
+    product1.test = function() {
+        console.log( '테스트 한다.' );
+    };
+
+    console.log( product1 );
+
+    // delete - key 요소 제거
+    delete( product1. name );
+
+    console.log( product1 );
+</script>
+</body>
+</html>

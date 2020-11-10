@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+</head>
+<body>
+<script type="text/javascript">
+    "use strict";
+
+    let numberFromLiteral = 273;
+    let numberFromConstructor = new Number( 273 );
+
+    console.log ( typeof numberFromLiteral ); // => 콘솔값 number
+    console.log ( typeof numberFromConstructor ); // => 콘솔값 object
+
+    // 정수 데이터 최대 / 최소
+    console.log( Number.MAX_VALUE ); // 정수 데이터 최대
+    console.log( Number.MIN_VALUE ); // 정수 데이터 최소
+
+    let num = 273.5210332;
+    console.log( num.toFixed( 1 ) ); // .toFixed( 1 ) 소수점 1자리까지 표기
+    console.log( num.toFixed( 3 ) ); // .toFixed( 3 ) 소수점 3자리까지 표기
+    
+</script>
+</body>
+</html>

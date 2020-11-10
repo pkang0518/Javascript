@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>난 제목</title>
+    <meta charset="utf-8" />
+</head>
+<body>
+<!--
+    http://192.168.0.16:8080/html/test.html?data1=&data2=&data3=
+    처리할 페이지명:
+    http://192.168.0.16:8080/html/form02.html
+    ?
+    데이터: (key=값)
+    data1=asdf
+    &
+    data2=asd
+    &
+    data3=asd
+
+    https://search.naver.com/search.naver
+    ?
+    sm=top_hty&fbm=1&ie=utf8&query=covid-19
+
+    https://search.naver.com/search.naver?sm=top_hty&fbm=1&ie=utf8&query=starwars
+-->
+<form action="test.html" method="get">
+    <input type="text" name="data1" />
+    <input type="text" name="data2" />
+    <input type="text" name="data3" />
+    <!-- 제출 버튼을 클릭하면 입력 내용을 가지고 test.html로 이동 -->
+    <input type="submit" value="전송하기" />
+</form>
+
+</body>
+</html>

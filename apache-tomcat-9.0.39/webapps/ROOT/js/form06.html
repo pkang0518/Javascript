@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+</head>
+<body>
+<script type="text/javascript">
+    "use strict";
+
+    // checkbox = radio
+    window.onload = function() {
+        for( let i = 0 ; i < document.frm1.amgn.length ; i++ ) {
+            document.frm1.amgn[i].checked = true ;
+        }
+    };
+
+    // 자료형 조심
+    const checkfrm = function() {
+        // console.log( document.frm1.amgn.length )
+        for( let i = 0 ; i < document.frm1.amgn.length ; i++ ) {
+            if( document.frm1.amgn[i].checked ) {
+                console.log( document.frm1.amgn[i].value );
+            }
+        }
+    };
+</script>    
+
+
+
+<form action = "test1.html" name = "frm1">
+<input type ="checkbox" name="amgn" value="사과"/>사과<br/>
+<input type ="checkbox" name="amgn" value="딸기"/>딸기<br/>
+<input type ="checkbox" name="amgn" value="수박"/>수박<br/>
+<input type="button" value="form문 읽기" onclick="checkfrm()" />
+</form>
+
+</body>
+</html>

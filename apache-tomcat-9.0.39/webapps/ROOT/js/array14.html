@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+</head>
+<body>
+<script type="text/javascript">
+    "use strict";
+
+    // 배열 선언 3가지 방법
+    let arr1 = [];
+    let arr2 = Array();
+    let arr3 = new Array();     // Array 객체 생성자
+
+    let arra1 = new Array( 1, 2, 3, 4 );
+    let arra2 = new Array( 5, 6, 7, 8 );
+
+    // 결합 + 
+    let arrsum = arra1.concat(arra2); // 위의 두 배열 결합
+    console.log( arrsum );
+
+    // 문자열 split <-> join
+    let astr1 = arra1.join( ':' ); // , 단위로 연결되서 출력 ex) 1, 2, 3, 4 ()안에 출력하고 싶은 문자열을 집어넣으면 , 대신 넣은 문자로 출력
+    console.log( astr1 );
+
+
+</script>
+</body>
+</html>
+
+</script>
+</body>
+</html>

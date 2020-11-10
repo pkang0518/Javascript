@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+</head>
+<body>
+<script type="text/javascript">
+    "use strict";
+
+    let product1 = {
+        // 속성을 나타냄
+        name: '7D 건조망고',
+        type: '당절임',
+        components: '망고, 설탕, 기타',
+        region: '필리핀',
+
+        eat: () => {
+            // 구형
+            // this - 자기참조
+            console.log( this.name, '맛있게 먹는다.' );
+        },
+        test: () => {
+            console.log( '테스트 한다.' );
+        }
+    };
+
+    for( let key in product1 ) {
+        console.log( key, product1[key] );
+    };
+
+    // in 검사
+    console.log( 'name' in product1 ); // product1 안에 'name' 이라는 key가 있는가? -> True
+    console.log( 'name1' in product1); // -> false
+
+</script>
+</body>
+</html>

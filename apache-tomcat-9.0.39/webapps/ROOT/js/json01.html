@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+</head>
+<body>
+<script type="text/javascript">
+    "use strict";
+
+    // json 객체표기법 (콘솔창에 펼쳐져서 표시됨)
+    let obj1 = {
+        name: '홍길동',
+        gender: 'male'
+    };
+
+    console.log( obj1 );
+    console.log( typeof obj1 );
+
+    // 위의 내용을 문자열화 str = (콘솔창에 문장이 연결되서 표시됨)
+    let str = JSON.stringify( obj1 );
+    console.log( str );
+
+    // 문자열화(string)를 json 객체표기로 바꾸기 ES6에 추가됨
+    let obj2 = JSON.parse( str );
+    console.log( obj2 );
+    console.log( obj2.name );
+
+    // 문자열화(string)를 json 객체표기로 바꾸기 ES6 추가되기 전 표기
+    let obj3 = eval( '(' + str + ')' );
+    console.log( obj3 );
+    console.log( obj3.name );
+
+
+</script>
+</body>
+</html>

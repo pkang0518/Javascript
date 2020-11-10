@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+</head>
+<body>
+
+<!-- Script 를 위로 가져올때 window.onload = function () 사용 -->
+<script type="text/javascript">
+    "use strict";
+    const viewTag = function () {
+    // window.onload = function () {
+        console.log( document.getElementById( 'first' ) );
+        console.log( document.getElementById( 'second' ) );
+
+        // document.getElementsByTagname <- 복수형***
+        let tags = document.getElementsByTagName( 'div' );
+        console.log( tags[2] );
+    };
+</script>
+
+<input type = "button" value = "태그 읽기" onclick = "viewTag()" />
+<hr />
+
+<!-- id 중복은 안됨 -->
+<div id = "first">첫 번째 div</div>
+<div id = "second">두 번째 div</div>
+<div id = "third">세 번째 div</div>
+
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+</head>
+<body>
+
+<script type="text/javascript">
+    "use strict";
+
+    const removeTag1 = function () {
+        let div = document.getElementById( 'div' );
+        
+        // 소스 상에는 남아있으나, 메모리 상에서 지워짐
+        document.body.removeChild( div ); // body에서 child를 지워라
+    };
+
+    const removeTag2 = function () {
+        let div = document.getElementById( 'div' );
+        // h1을 지우고 싶을 때
+        let header1 = document.getElementById( 'h1' );
+        let header2 = document.getElementById( 'h2' );
+        
+        // h1을 지우고 싶을 때
+        // div.removeChild( header1 );
+        div.removeChild( header2 );
+    };
+
+</script>
+
+<input type="button" value="tag 제거" onclick="removeTag1()" />
+<input type="button" value="tag 제거" onclick="removeTag2()" />
+
+<hr />
+
+<div id = 'div'>
+    <h1 id="h1">Header 1</h1>
+    <h1 id="h2">Header 2</h2>
+
+</body>
+</html>

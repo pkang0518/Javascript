@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+</head>
+<body>
+<script type="text/javascript">
+    "use strict";
+
+    // 중복값 제거... => 함수화
+    document.write( '<table border = "1" width = "600">' );
+    for( let i = 1 ; i <= 5 ; i++ ) {  // 바깥의 for문은 행의 갯수
+        document.write( '<tr>' );
+            for( let j = 1 ; j < 7 ; j++ ) {
+                document.write( '<td>' + ( parseInt( Math.random( ) * 45 ) + 1 ) + '</td>' )
+            }
+        document.write( '</tr>' );
+    }
+    document.write( '</table>' ); 
+        
+</script>
+</body>
+</html>

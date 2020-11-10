@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<style type="text/css">
+    table {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+
+    td {
+        border: 1px dashed black;
+        width: 100px;
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+<script type="text/javascript">
+    "use strict"
+
+    document.write( '<table>' );
+    for( let dan=1 ; dan<=9 ; dan++ ) {
+        document.write ( '<tr> ' );
+        for( let col = 1 ; col<=9 ; col++) {
+            document.write ( '<td>' + dan + 'X' + col + ' = ' + (dan*col) + '</td>' );  // 문자열 + 값 + 문자열
+        }
+        document.write( '<tr>' );
+    }
+    document.write( '</table>' );
+
+    document.write( '<br /><hr /><hr /><br />' );
+
+    document.write( '<table>' );
+    for( let row=1 ; row<=9 ; row++) {
+        document.write ( '<tr>' );
+        for( let col=1 ; col<=9 ; col++ ) {
+            document.write( '<td>' + row + 'X' + col + ' = ' + (row*col) + '</td>' );   
+        }
+        document.write ( '</tr>' );
+    }
+document.write ( '</table>' );
+</script>
+</body>
+</html>

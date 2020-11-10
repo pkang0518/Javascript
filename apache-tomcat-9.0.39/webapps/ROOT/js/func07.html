@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<script type="text/javascript">        
+    "use strict"
+ 
+    let multiple = function(num){    
+        document.write('<table id="innertable" border="1" width="200">');
+          for(let i=1; i<10; i++){
+        document.write('    <tr>'); 
+            document.write('    <td> ',num,' X ',i,' = ',num*i,'</td>');
+        document.write('    </tr>');
+    }
+        document.write('</table>');
+    }
+</script>
+<style type="text/css">
+    #innertable{
+        text-align: center;
+        border-color: red;
+    }
+ 
+    #innertable td{
+        border-style: dotted;
+        border-color: purple;  
+    }
+</style>
+</head>
+<body>
+<script type="text/javascript">
+    "use strict"
+ 
+    //for문 2개, 함수를 이용해서 table(3*3)안에 구구단만들기
+    let i = 1;
+    document.write('<table width="300" height="600">');
+    for(let row=1; row<=3; row++){
+        document.write('    <tr>')
+        for(let col=1; col<=3; col++){
+            document.write('        <td>');
+            multiple(i);
+            document.write('        </td>');
+            i++;
+        }
+        document.write('    </tr>');
+    }
+    document.write('</table>');
+ 
+ 
+</script>
+</body>
+</html>

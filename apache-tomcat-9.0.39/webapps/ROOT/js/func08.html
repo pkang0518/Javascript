@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<script type="text/javascript">
+    "use strict";
+    function func1() {
+        console.log( 'func1() 호출');  // 직접 선언
+    }
+
+    let func2 = function() {
+        console.log( 'func2() 호출 '); // 간접 선언(대입)
+    };
+
+    // 화살표 함수(lambda) = =>
+    let func3 = () => {
+        console.log( 'func3() 호출' );
+    };
+
+    let func31 = ( data ) => {
+        console.log( 'func31() 호출', data);
+    };
+
+    let func32 = ( data1, data2 ) => {
+        return data1 + data2;
+    };
+</script>
+
+</head>
+<body>
+<script type="text/javascript">
+    func1();
+    func2();
+    func3();
+    func31( 10 );
+    console.log('result :', func32(100, 200));
+</script>
+</body>
+</html>

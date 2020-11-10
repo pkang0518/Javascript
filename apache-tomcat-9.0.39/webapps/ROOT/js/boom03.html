@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+</head>
+<body>
+<script type="text/javascript">
+    "use strict";
+
+    // 5초 후에 자동적으로 m.daum.net 페이지가 열리게끔 함수 autoopenWindow() 만들기
+
+    // 사용자 정의 함수
+    // autoOpenWindow
+    const autoOpenWindow = function () {
+        setTimeout( function () {
+            let option = `top=100, left=100, width=600, height=800`;
+            open('./subwin.html', 'openwin', option);
+        }, 5000);
+    }
+
+    // autoCloseWindow
+    const autoCloseWindow = function () {
+        let option = `top=100, left=100, width=600, height=800`;
+        let child = open('./subwin.html', 'openwin', option);
+        
+        setTimeout( function () {
+            child.close();
+        }, 5000);
+    }
+
+
+</script>
+<!-- *****************html에서 함수 호출법****************** -->
+<!-- 방법 1 --> 
+<a href="javascript:autoCloseWindow()">함수 호출</a><br /><br /> 
+<!-- 방법 2 -->
+<input type="button" value="함수 호출" onclick="autoOpenWindow()"/><br /><br />
+
+</body>
+</html>

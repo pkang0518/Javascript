@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+</head>
+<body>
+<script type="text/javascript">
+    "use strict";
+
+    // 공백을 만들어 놓아도 출력창에 해당 값(공백이 아닌)을 넣는다면 출력 됨
+    /*
+    let [ one, , , four ] = [ 1, 2, 3, 4 ];
+    console.log( one, four );
+    */
+
+    // ...은 나머지 전부를 의미 (spread 연산자) => 배열화 처리
+    let [ one, two, ...four ] = [ 1, 2, 3, 4 ];
+    console.log( one, two, four );
+    console.log( four );
+    console.log( four[0], four[1] );
+</script>
+</body>
+</html>
+
+</script>
+</body>
+</html>

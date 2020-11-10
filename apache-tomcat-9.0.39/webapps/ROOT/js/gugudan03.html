@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<script type="text/javascript">
+    "use strict"
+    let gugudan = function (dan) { // function ( 변수 )
+        let str = '';
+        str += '<table border ="1" width ="200">';
+        for( let col=1 ; col<=9 ; col++ ) {
+            str += '<tr>';
+            str += '    <td>' + dan + 'X' + col + '=' + (dan*col) + '</td>';
+            str += '</tr>';
+        }
+        str += '</table>';
+        return str;
+    };
+</script>
+</head>
+<body>
+<script type="text/javascript">
+    document.write ('<table border="1" width="200">');
+    let dan = 1;
+    for( let i=1 ; i<=3 ; i++ ) {
+        document.write( '<tr>' );
+        for( let j=1 ; j<=3 ; j++ )  {
+            document.write( '<td>' + gugudan(dan) + '</td>' );
+            ++dan; // dan++ 하고 하는 일은 같음 ( dan ++ 은 dan 적용이 안되고 다음줄로 넘어 가서 다음줄에서 바뀜 / ++dan 그 줄에서 적용 후 결과 값 출력 )
+        }
+        document.write( '</tr>' );
+    }
+    document.write( '</table>' );
+
+
+</script>
+</body>
+</html>

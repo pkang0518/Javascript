@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+</head>
+<body>
+<script type="text/javascript">
+    "use strict"
+    /*
+        시간 시간 / 반복 시간 = ms
+        1회성 - setTimeout
+        주기적인 처리(무한반복) - setInterval / clearInterval
+    */
+    
+    let cmd = function() {
+        console.log( '3초 후에 실행' );
+    };
+    console.log( '시작' );
+    // 병렬적인 흐름이 추가됨(thread)
+    // cmd : callback 함수 (시스템이 호출하는 함수)
+    /*
+    setTimeout( cmd, 3000 );
+    */
+    // 시계
+    setInterval( cmd, 3000 );
+    console.log( ' 끝 ' );
+</script>
+</body>
+</html>

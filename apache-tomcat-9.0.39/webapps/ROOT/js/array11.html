@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+</head>
+<body>
+<script type="text/javascript">
+    "use strict";
+
+    const rotation = function( x, y, theta ) {
+        let result = x + y + theta;
+        return result
+    }
+    
+    const rotation2 = function( x, y, theta ) {
+        let result = x + y + theta;
+        // return 여러개 만들 수 있음
+        return [ x, y, result ];
+    }
+
+    let result = rotation( 10, 20, 30 );
+    console.log( 'result :', result )
+
+    let [x, y, result2] = rotation2( 10, 20, 30 );
+    console.log( x, y, result2 )
+
+</script>
+</body>
+</html>
+
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+</head>
+<body>
+<script type="text/javascript">
+    "use strict";
+
+    // 문제2. 창을 정가운데에 띄우기
+    const goUrl = function () {
+        // 창크기
+        let width1 = 600;
+        let height1 = 800;
+
+        // 창의 위치 계산
+        let left1 = screen.width/2 - width1/2;
+        let top1 = screen.height/2 - height1/2;
+
+        let option = `top=${top1},left=${left1},width=${width1},height=${height1}`;
+        window.open( 'https://m.daum.net', 'child', option );
+    }
+    
+
+</script>
+<!-- 방법 1 --> 
+<a href='javascript:goUrl()'>다음 모바일</a><br /><br /> 
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+</head>
+<body>
+<script type="text/javascript">
+    "use strict"
+    /*
+        문자열 -> 실행문화
+    */
+
+    let expr1 = '2 + 3';
+    console.log( expr1 );
+    console.log( eval(expr1) ); // eval(문자열) => 문자열을 실행문으로 바꿔줌
+
+
+    // 문자열 데이터를 실행문으로 바꿔주기
+    let expr2 = 'let num1 = 10;';
+    expr2 += 'let num2 = 20;';
+    expr2 += 'alert( num1 + num2) ;';
+
+    eval( expr2 );
+
+</script>
+</body>
+</html>

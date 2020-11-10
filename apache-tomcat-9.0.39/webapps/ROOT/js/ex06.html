@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+</head>
+<body>
+<script type="text/javascript">
+    "use strict"; // 문법 검사를 엄격하게 진행
+    // let      - 변수 : var
+    // const    - 상수(한 번 값을 집어넣으면 바꿀 수 없음)
+
+    let book1 = 'testbook';      // 순차적 실행 1
+    console.log( book1 );        // 순차적 실행 1
+    book1 = 'samblebook';        // 순차적 실행 2 
+    console.log( book1 );        // 순차적 실행 1
+
+    const book2 = 'testbook';
+    console.log( book2 );
+    // book2 = 'samplebook';
+
+    // let book1; <- 중복 선언 시 에러
+</script>
+</body>
+</html>

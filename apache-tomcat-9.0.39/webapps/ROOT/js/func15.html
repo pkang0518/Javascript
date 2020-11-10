@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+</head>
+<body>
+<script type="text/javascript">
+    "use strict"
+    /*
+        다국어의 URL Encording / Decording
+    
+    */
+    
+    let str = '코로나 19';
+    let enStr = encodeURIComponent( str );
+
+    // 번역값 %EC%BD%94%EB%A1%9C%EB%82%98%2019
+    // 을 대입하면
+    // https://search.naver.com/search.naver?sm=tab_hty.top&where=nexearch&query=%EC%BD%94%EB%A1%9C%EB%82%98%2019
+
+    console.log( enStr );
+    console.log( decodeURIComponent( enStr ) );
+</script>
+</body>
+</html>

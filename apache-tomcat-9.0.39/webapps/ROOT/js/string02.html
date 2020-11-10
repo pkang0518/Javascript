@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+</head>
+<body>
+<script type="text/javascript">
+    "use strict";
+    
+    // 검색(p.143 참고)
+    // includes / startWith / endsWith 
+    
+    // includes (문자열에 포함되어 있는가?)
+    let target = '123가나다라456';
+
+    console.log( target.includes( 2 ) ); 
+    console.log( target.includes( '나' ) );
+    console.log( target.includes( '마' ) );
+
+    // startsWith (key를 가지고 시작하는가?)
+    console.log( target.startsWith( 123 ) );
+    console.log( target.startsWith( 23 ) );
+
+    // endsWith (key를 가지고 끝나는가?)
+    console.log( target.endsWith( 456 ) );
+    console.log( target.endsWith( 23 ) );
+</script>
+</body>
+</html>
